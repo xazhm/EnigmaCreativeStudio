@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="login-box">
-      <h2>Login</h2>
+      <h2>Create An Account</h2>
       <form>
         <div class="user-box">
           <input type="email" name="" required="" />
