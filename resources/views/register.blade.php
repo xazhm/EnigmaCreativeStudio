@@ -10,14 +10,16 @@
       <h2>Login</h2>
       <form>
         <div class="user-box">
-          <input type="text" name="" required="" />
+          <input type="email" name="" required="" />
+          <label>Email</label>
+        </div>
+        <div class="user-box">
+          <input type="password" name="" required="" />
           <label>Username</label>
         </div>
         <div class="user-box">
           <input type="password" name="" required="" />
           <label>Password</label>
-
-          
         </div>
         <div class="option">
         <a href="#">
@@ -28,15 +30,8 @@
           Submit
         </a>
 
-        <a class="regist" href="register"> Register</a>
+        <a class="regist" href="login"> Log In</a>
       </div>
       </form>
-
-      
-
-
-
-        
-
   </body>
 </html>
