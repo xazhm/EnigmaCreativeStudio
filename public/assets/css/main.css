@@ -4,115 +4,618 @@
     --color3: #fdf490;
     --color4: #ffffff;
     --color5: #1b1b1f;
+
+    --Hijau: #4a8c80;
+    --Pink: #b23282;
+    --Cream: #dfb279;
+    --Abu: #242323;
+    --Hitam: #0c0c0c;
+    --Putih: #ffffff;
+    --user-button-circle: rgba(0, 0, 0, 0.025);
+    --user-button-cardborder: rgba(255, 255, 255, 0.25);
+    --user-button-text: #323133;
+    --user-button-shadow: rgba(0, 0, 0, 0.1);
 }
+@font-face {
+    font-family: "neue_leidenbold";
+    src: url("../font/neueleiden-bold-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-bold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "neue_leidenlight";
+    src: url("../font/neueleiden-light-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-light-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "neue_leidenmedium";
+    src: url("../font/neueleiden-medium-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-medium-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "neue_leidenregular";
+    src: url("../font/neueleiden-regular-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "neue_leidensemibold";
+    src: url("../font/neueleiden-semibold-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-semibold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "neue_leidenextralight";
+    src: url("../font/neueleiden-extralight-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-extralight-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "neue_leidenthin";
+    src: url("../font/neueleiden-thin-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-thin-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url(https://pro.fontawesome.com/releases/v5.11.2/css/all.css);
 
 body {
-    background-color: var(--color5);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Hitam);
+    font-family: "neue_leidenbold", sans-serif;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Landing */
-
-.page-transition .div {
-    position: fixed;
-    background-color: var(--color3);
-    height: 100%;
-    bottom: 100%;
-    width: 25%;
-    z-index: 9998;
+.wrapper .line {
+    margin-top: 1rem;
+    width: 1120px;
+    height: 0.5rem;
+    background-color: var(--Putih);
+    border-radius: 30%;
 }
 
-.page-transition .div:nth-child(1) {
+body .wrapper {
+    width: 1120px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    display: flex;
+    height: 100vh;
+}
+
+body .wrapper h1 {
+    font-weight: bold;
+    color: var(--Hitam);
+    -webkit-text-stroke: 2px var(--Pink);
+    font-size: 10rem;
+    font-family: "neue_leidenbold", sans-serif;
+}
+
+/* template */
+body .template {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+body .template .options {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow: hidden;
+    min-width: 600px;
+    max-width: 1220px;
+    width: calc(100% - 100px);
+    height: 832px;
+}
+@media screen and (max-width: 718px) {
+    body .template .options {
+        min-width: 520px;
+    }
+    body .template .options .option:nth-child(5) {
+        display: none;
+    }
+}
+@media screen and (max-width: 638px) {
+    body .template .options {
+        min-width: 440px;
+    }
+    body .template .options .option:nth-child(4) {
+        display: none;
+    }
+}
+@media screen and (max-width: 558px) {
+    body .template .options {
+        min-width: 360px;
+    }
+    body .template .options .option:nth-child(3) {
+        display: none;
+    }
+}
+@media screen and (max-width: 478px) {
+    body .template .options {
+        min-width: 280px;
+    }
+    body .template .options .option:nth-child(2) {
+        display: none;
+    }
+
+    /* Animasi Expand  */
+}
+.template .wrapper .options .option {
+    position: relative;
+    overflow: hidden;
+    min-width: 100px;
+    margin: 10px;
+    background: var(--optionBackground, var(--defaultBackground, #e6e9ed));
+    background-size: auto 120%;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+.template .wrapper .options .option:nth-child(1) {
+    --defaultBackground: #ed5565;
+}
+.template .wrapper .options .option:nth-child(2) {
+    --defaultBackground: #fc6e51;
+}
+.template .wrapper .options .option:nth-child(3) {
+    --defaultBackground: #ffce54;
+}
+.template .wrapper .options .option:nth-child(4) {
+    --defaultBackground: #2ecc71;
+}
+.template .wrapper .options .option:nth-child(5) {
+    --defaultBackground: #5d9cec;
+}
+.template .wrapper .options .option:nth-child(6) {
+    --defaultBackground: #ac92ec;
+}
+.template .wrapper .options .option.active {
+    flex-grow: 10000;
+    transform: scale(1);
+    max-width: 1000px;
+    margin: 0px;
+    border-radius: 40px;
+    background-size: auto 100%;
+    /*&:active {
+       transform:scale(0.9);
+    }*/
+}
+.template .wrapper .options .option.active .shadow {
+    box-shadow: inset 0 -120px 120px -120px black,
+        inset 0 -120px 120px -100px black;
+}
+.template .wrapper .options .option.active .label {
+    bottom: 20px;
+    left: 20px;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
+.template .wrapper .options .option.active .label .info > div {
     left: 0px;
+    opacity: 1;
+}
+.template .wrapper .options .option:not(.active) {
+    flex-grow: 1;
+    border-radius: 30px;
+}
+.template .wrapper .options .option:not(.active) .shadow {
+    bottom: -40px;
+    box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
+}
+.template .wrapper .options .option:not(.active) .label {
+    bottom: 10px;
+    left: 10px;
+}
+.template .wrapper .options .option:not(.active) .label .info > div {
+    left: 20px;
+    opacity: 0;
+}
+.template .wrapper .options .option .shadow {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 120px;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+.template .wrapper .options .option .label {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    height: 40px;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+.template .wrapper .options .option .label .icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    max-width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: white;
+    color: var(--defaultBackground);
+}
+.template .wrapper .options .option .label .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    color: white;
+    white-space: pre;
+}
+.template .wrapper .options .option .label .info > div {
+    position: relative;
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
+}
+.template .wrapper .options .option .label .info .main {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.template .wrapper .options .option .label .info .sub {
+    transition-delay: 0.1s;
 }
 
-.page-transition .div:nth-child(2) {
-    left: 25%;
+.template .wrapper .button {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    background-color: var(--Hijau);
+    max-width: 1120px;
+    min-height: 8vh;
+    border-radius: 30px;
+    align-items: center;
 }
 
-.page-transition .div:nth-child(3) {
-    left: 50%;
+/* About */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    font-family: "neue_leidenbold", sans-serif;
+    margin-top: 100px;
+    align-items: center;
 }
 
-.page-transition .div:nth-child(4) {
-    left: 75%;
+.about .about-us h2 {
+    font-size: 88px;
+    margin: 0px;
+    color: var(--Putih);
 }
 
-.preload {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
+.about .about-us .hover::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
 }
 
-.preload li {
+.about .about-us .hover:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.about .about-us .hover::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 20% 0 0;
+    background: var(--Putih);
+    z-index: -1;
+    transition: transform 0.3s ease-out;
+}
+
+.about .about-us .hover {
+    position: relative;
+}
+
+.about .about-us h2:hover {
+    color: var(--Pink);
+}
+
+.about .about-us .describe {
+    margin-top: 5%;
+    text-align: right;
+    max-width: 832px;
+    color: var(--Putih);
+    margin-left: 20%;
+    font-family: "neue_leidenmedium", sans-serif;
+    font-size: 1.3rem;
+}
+
+/* Marque*/
+
+.about-footer {
+    width: 100%;
+    overflow: hidden;
+}
+
+#Group5 {
     display: inline-block;
-    width: 10px;
-    height: 10px;
-    border: 2px solid var(--color2);
-    border-radius: 50%;
+    animation: marquee 5s linear infinite;
 }
 
-/* Main */
-.main {
+@keyframes marquee {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* porto */
+
+.porto .porto-card {
+    max-height: 50vh;
     display: flex;
     flex-direction: column;
 }
-.main .main-title {
-    height: 50vh;
-    color: aqua;
+
+.card {
+    border: 0.3vmin solid var(--Cream);
+    cursor: pointer;
+    position: relative;
+    max-width: 1040px;
+    max-height: 130px;
+    width: 100vmin;
+    height: 20vmin;
+    margin-top: 5vmin;
 }
 
-.main .menu-bar {
+.card:hover:before {
+    background-position: 100% 100%;
+    transform: scale(1.08, 1.03);
+}
+
+.card:hover > .card-content {
+    background-position: -10% 0%;
+}
+
+.card:hover > .card-icon {
+    color: white;
+}
+
+.card:hover > .card-content > .card-subtitle > .card-subtitle-word {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: opacity 0ms, transform 200ms cubic-bezier(0.9, 0.06, 0.15, 0.9);
+}
+
+.card:before {
+    background: linear-gradient(
+        96.76deg,
+        transparent 0% 37%,
+        #61f2e4 -35.97%,
+        #69e9e4 -23.96%,
+        #70e0e4 -11.95%,
+        #78d7e4 0.06%,
+        #80cee4 12.07%,
+        #87c5e4 24.08%,
+        #8fbce4 36.09%,
+        #96b3e4 48.1%,
+        #9eaae4 60.1%,
+        #a6a1e3 71.14%,
+        #ad98e3 84.12%,
+        #b58fe3 96.13%,
+        #bd86e3 108.14%,
+        #c47de3 120.15%,
+        #cc74e3 132.16%,
+        #d36be3 144.17%,
+        #db62e3 156.18%
+    );
+    background-position: 0% 0%;
+    background-size: 300% 300%;
+    content: "";
+    height: 100%;
+    left: 0px;
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    transition: background-position 350ms ease, transform 350ms ease;
+    width: 100%;
+    z-index: 1;
+}
+
+.card-content {
+    background-image: radial-gradient(
+        rgba(255, 255, 255, 0.2) 8%,
+        transparent 8%
+    );
+    background-position: 0% 0%;
+    background-size: 5vmin 5vmin;
+    height: calc(100% - 10vmin);
+    padding: 5vmin;
+    position: relative;
+    transition: background-position 350ms ease;
+    width: calc(100% - 10vmin);
+    z-index: 2;
+}
+
+.card-title {
+    color: white;
+    font-family: "neue_leidensemibold", sans-serif;
+    margin: 0px;
+}
+
+.card-title {
+    font-size: 6vmin;
+}
+
+.card-icon {
+    bottom: 0px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 7vmin;
+    left: 0px;
+    margin: 5vmin;
+    position: absolute;
+    transition: color 250ms ease;
+    z-index: 2;
+}
+
+.porto .copywriting {
+    margin-top: 30vmin;
+}
+
+.porto .copywriting h2 {
+    color: var(--Putih);
+    margin: 0px;
+    font-size: 8vmin;
+}
+
+.porto .copywriting h2 span {
+    color: var(--Cream);
+}
+
+.porto .copywriting .highlight {
+    background-color: var(--Cream);
+    content: "";
+    width: calc(100% + 2px);
+    height: 60%;
+    left: -2px;
+    bottom: 0;
+}
+
+/* service */
+
+.service .wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100vh;
+    padding: 1rem;
+}
+
+.service h3 {
+    font-family: "neue_leidenlight", sans-serif;
+    font-size: 4vw;
+    color: var(--Putih);
+}
+.service .card-wrapper {
     display: flex;
 }
-
-/*box child*/
-.main .menu-bar .box {
-    background: var(--color4);
-    height: 492px;
-    width: 796px;
-    border-radius: 71px;
-    background-color: var(--color1);
+.service .card-container {
+    padding: 4px;
 }
 
-.main .menu-bar .box1 {
-    width: 616px;
-    height: 246px;
+@keyframes pulse {
+    from,
+    to {
+        scale: 1;
+    }
 
-    background-color: var(--color2);
-    border-radius: 71px;
+    50% {
+        scale: 1.08;
+    }
 }
 
-.main .menu-bar .child-left {
+#card,
+#card1,
+#card2 {
+    width: calc(max(150px, 40vmin));
+    aspect-ratio: 2 / 3;
+    border: 0.25rem solid rgb(255 255 255 / 15%);
+    border-radius: 1rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#card > img,
+#card1 > img,
+#card2 > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+#card:hover > img {
+    animation: pulse 800ms ease-in-out;
+    filter: url(#noise);
+}
+
+#card1:hover > img {
+    animation: pulse 800ms ease-in-out;
+    filter: url(#noise1);
+}
+
+#card2:hover > img {
+    animation: pulse 800ms ease-in-out;
+    filter: url(#noise2);
+}
+
+@media (max-width: 768px) {
+    #card,
+    #card1,
+    #card2 {
+        width: 100%;
+    }
+}
+
+.service .card-container .card-title {
+    font-family: "neue_leidenextralight", sans-serif;
+    font-size: calc(max(25px, 1.55vw));
+    text-align: center;
+}
+
+.service .button-service svg {
+    max-width: 110vmin;
+}
+
+/* contact */
+
+.contact .wrapper {
+    padding: 5vmin;
     display: flex;
+    color: var(--Putih);
+    align-items: flex-start;
+    justify-content: left;
+    gap: 5vmin;
 }
 
-.main .menu-bar .child-left .box2:nth-child(1) {
-    width: 308px;
-    height: 246px;
-    background-color: var(--color3);
-    border-radius: 71px;
+.contact h5 {
+    font-family: "neue_leidenextralight", sans-serif;
+    font-size: calc(max(20px, 1.55vw));
 }
 
-.main .menu-bar .child-left .box2:nth-child(2) {
-    width: 308px;
-    height: 246px;
+.contact .wrapper ul {
+    display: flex;
+    gap: 5vh;
+    list-style: none;
+}
 
-    background: var(--color4);
-    border-radius: 71px;
+.contact .credit {
+    margin-top: 15vmin;
 }
 
 /* Login */
-html {
-    height: 100%;
-}
-body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background: linear-gradient(#141e30, #243b55);
-}
 
 .login-box {
     position: absolute;
