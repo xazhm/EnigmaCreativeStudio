@@ -10,6 +10,10 @@ body {
     background-color: var(--color5);
 }
 
+p{
+    color: white;
+    text-align: center;
+}
 /* Landing */
 
 .page-transition .div {
