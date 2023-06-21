@@ -29,6 +29,14 @@ Route::get('/catalog', function () {
     return view('catalog');
 });
 
+Route::get('/cart', function () {
+    return view('cart');
+});
+
+Route::get('/confirmation', function () {
+    return view('after-checkout');
+});
+
 
 Route::get('/login', function () {
     return view('auth.login');
