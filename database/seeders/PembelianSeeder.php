@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Pembelian;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class PembelianSeeder extends Seeder
 {
@@ -13,16 +14,8 @@ class PembelianSeeder extends Seeder
      */
     public function run(): void
     {
-        Pembelian::create([
-            'totalHarga' => 250,
-            'users_id' => $user->id,
-            'designs_id' => 1
-        ]);
-
-        Pembelian::create([
-            'totalHarga' => 100,
-            'users_id' => 2,
-            'designs_id' => 2
+        DB::table('pembelians')->insert([
+            'totalHarga' => '100000'
         ]);
     }
 }

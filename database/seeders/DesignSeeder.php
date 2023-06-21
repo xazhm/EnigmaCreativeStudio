@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Design;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DesignSeeder extends Seeder
 {
@@ -13,18 +14,11 @@ class DesignSeeder extends Seeder
      */
     public function run(): void
     {
-        Design::create([
-            'gambar' => 'gambar1.jpg',
-            'name' => 'Design 1',
-            'detail' => 'Detail design 1',
-            'harga' => 100
-        ]);
-
-        Design::create([
-            'gambar' => 'gambar2.jpg',
-            'name' => 'Design 2',
-            'detail' => 'Detail design 2',
-            'harga' => 150
+        DB::table('designs')->insert([
+            'gambar' => 'xxxxxxx',
+            'name' => 'Design1',
+            'detail' =>'awikwokslurrrr',
+            'harga' => '10000'
         ]);
     }
 }
