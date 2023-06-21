@@ -16,12 +16,17 @@ use App\Http\Controllers\Auth\RegisterController;
 */
 
 Route::get('/', function () {
-    return redirect('/welcome');
+    return redirect('/home');
 });
 
-Route::get('/welcome', function () {
-    return view('welcome');
+Route::get('/home', function () {
+    return view('home');
 });
+
+Route::get('/catalog', function () {
+    return view('catalog');
+});
+
 
 Route::get('/login', function () {
     return view('auth.login');
@@ -31,15 +36,15 @@ Route::get('/register', function () {
     return view('auth.register');
 })->name('register');
 
-Route::post('/register', [RegisterController::class, 'register'])->name('register');
+// Route::post('/register', [RegisterController::class, 'register'])->name('register');
 
-Route::post('/login', [LoginController::class, 'login'])->name('login');
+// Route::post('/login', [LoginController::class, 'login'])->name('login');
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Auth::routes();
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/admin.catalog', [App\Http\Controllers\CatalogController::class, 'index']);
+// Route::get('/admin.catalog', [App\Http\Controllers\CatalogController::class, 'index']);
