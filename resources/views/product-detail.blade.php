@@ -33,7 +33,7 @@
       <div class="wrapper">
         <div class="card">
           <div class="image-placeholder">
-            <img src="artfolio.png" alt="" />
+            <img src="assets/images/artfolio.png" alt="" />
           </div>
         </div>
         <div class="section2">
