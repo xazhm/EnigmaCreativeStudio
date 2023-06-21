@@ -18,7 +18,8 @@ class DesignSeeder extends Seeder
             'gambar' => 'xxxxxxx',
             'name' => 'Design1',
             'detail' =>'awikwokslurrrr',
-            'harga' => '10000'
+            'harga' => '10000',
+            'category_id' => 1
         ]);
     }
 }

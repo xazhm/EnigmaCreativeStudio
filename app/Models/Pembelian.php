@@ -18,7 +18,7 @@ class Pembelian extends Model
     }
 
     // Relationship with Design
-    public function design()
+    public function designs()
     {
         return $this->belongsTo(Design::class, 'designs_id');
     }

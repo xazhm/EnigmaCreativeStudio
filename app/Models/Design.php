@@ -15,4 +15,10 @@ class Design extends Model
     {
         return $this->hasMany(Pembelian::class, 'designs_id');
     }
+
+    // Relationship with Category
+    public function category()
+    {
+        return $this->belongsTo(Design::class, 'category_id');
+    }
 }
