@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enigma</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/landing.css') }}" />
+    <link rel="stylesheet" href="assets/css/landing.css" />
 
     <link
       rel="stylesheet"
@@ -38,7 +38,7 @@
   
           <nav>
               <ul>
-                  <li><a href="catalog.html">Store</a></li>
+                  <li><a href="#">Store</a></li>
                   <li><a href="#">About</a></li>
                   <li><a href="#">Project</a></li>
                   <li><a href="#">Service</a></li>
@@ -80,7 +80,7 @@
           <div
             class="option active"
             style="
-              background-image: url(assets/images/pixelcraft.jpg);
+              background-image: url(pixelcraft.jpg);
             "
           >
             <div class="shadow"></div>
@@ -97,7 +97,7 @@
           <div
             class="option"
             style="
-              background-image: url(assets/images/visualblueprint.jpg);
+              background-image: url(visualblueprint.jpg);
             "
           >
             <div class="shadow"></div>
@@ -114,7 +114,7 @@
           <div
             class="option"
             style="
-              background-image: url(assets/images/artfolio.png);"
+              background-image: url(artfolio.png);"
           >
             <div class="shadow"></div>
             <div class="label">
@@ -130,7 +130,7 @@
           <div
             class="option"
             style="
-              background-image: url(assets/images/visualblueprint.jpg);"
+              background-image: url(visualblueprint.jpg);"
           >
             <div class="shadow"></div>
             <div class="label">
@@ -146,7 +146,7 @@
           <div
             class="option"
             style="
-              background-image: url(assets/images/artfolio.png);"
+              background-image: url(artfolio.png);"
           >
             <div class="shadow"></div>
             <div class="label">
@@ -405,7 +405,7 @@
 
           <div id="card">
             <img
-              src="assets/images/brand.png"
+              src="brand.png"
               alt="Neon sign in woods"
             />
           </div>
@@ -445,7 +445,7 @@
         </svg>
         <div id="card1">
           <img
-            src="assets/images/web.png"
+            src="web.png"
             alt="Neon sign in woods"
 
           />
@@ -486,7 +486,7 @@
 
         <div id="card2">
           <img
-            src="assets/images/animation.png"
+            src="animation.png"
             alt=""
           />
         </div>
@@ -556,8 +556,6 @@
     <script>AOS.init();</script>;
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <script src="{{ asset('assets/js/script.js') }}"></script>
+    <script src="assets/js/catalog.js"></script>
   </body>
 </html>
-
-
