@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <title>Catalog</title>
 
-    <link rel="stylesheet" href="assets/css/catalog.css" />
+    <link rel="stylesheet" href="{{ asset('assets/css/catalog.css') }}" />
   </head>
   <body>
     <div class="wrapper">
       <div class="filtering">
         <h1>test</h1>
       </div>
-      <div class="row"> 
+      <div class="row">
         <div class="column">
           <figure class="card carder">
             <img src="assets/images/contoh.jpg" />
