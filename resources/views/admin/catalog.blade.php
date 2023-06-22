@@ -1,10 +1,11 @@
+{{-- ada di jemek --}}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Catalog</title>
 
-    <link rel="stylesheet" href="{{ asset('assets/css/catalog.css') }}" />
+    <link rel="stylesheet" href="assets/css/catalog.css" />
   </head>
   <body>
     <div class="wrapper">
