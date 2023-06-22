@@ -1,52 +1,44 @@
-window.addEventListener("load", function () {
-  var preLoaderLi = $(".preload li");
-  var pageDiv = $(".page-transition .div");
-  var loading = new TimelineMax({ paused: true });
-  var slideUp = new TimelineMax({ paused: true });
-  var loadAnimation = new TimelineMax();
+// Sticky Header
+$(window).scroll(function () {
+    if ($(window).scrollTop() > 100) {
+        $(".main_h").addClass("sticky");
+    } else {
+        $(".main_h").removeClass("sticky");
+    }
+});
 
-  TweenMax.set(pageDiv, { bottom: "0%" });
+// Mobile Navigation
+$(".mobile-toggle").click(function () {
+    if ($(".main_h").hasClass("open-nav")) {
+        $(".main_h").removeClass("open-nav");
+    } else {
+        $(".main_h").addClass("open-nav");
+    }
+});
 
-  loading
-    .staggerFrom(
-      preLoaderLi,
-      0.5,
-      {
-        y: -15,
-        autoAlpha: 0,
-        ease: Power1.easeIn,
-      },
-      0.2
-    )
-    .staggerTo(
-      preLoaderLi,
-      0.5,
-      {
-        y: 35,
-        autoAlpha: 0,
-        ease: Power1.easeIn,
-      },
-      0.1
+$(".main_h li a").click(function () {
+    if ($(".main_h").hasClass("open-nav")) {
+        $(".navigation").removeClass("open-nav");
+        $(".main_h").removeClass("open-nav");
+    }
+});
+
+// Navigation Scroll
+$("nav a").click(function (event) {
+    var id = $(this).attr("href");
+    var offset = 70;
+    var target = $(id).offset().top - offset;
+    $("html, body").animate(
+        {
+            scrollTop: target,
+        },
+        500
     );
+    event.preventDefault();
+});
 
-  slideUp.staggerTo(
-    pageDiv,
-    0.3,
-    {
-      bottom: "100%",
-      ease: Power2.easeOut,
-    },
-    0.2
-  );
-
-  loadAnimation.add(loading.play()).add(slideUp.play());
-
-  setTimeout(function () {
-    $(".loading").fadeOut(500, function () {
-      $(".main")
-        .css({ display: "flex", opacity: 0 })
-        .animate({ opacity: 1 }, 500)
-        .slideDown(500);
-    });
-  }, 3000);
+// Expand Card
+$(".option").click(function () {
+    $(".option").removeClass("active");
+    $(this).addClass("active");
 });

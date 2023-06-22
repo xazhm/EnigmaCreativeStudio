@@ -7,10 +7,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Cviebrock\EloquentSluggable\Sluggable;
 
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
+    use Sluggable;
+
+    protected $table = 'users';
 
     /**
      * The attributes that are mass assignable.
@@ -21,7 +25,19 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'no_telp',
+        'slug',
+        'role_id',
     ];
+
+    public function sluggable(): array
+    {
+        return [
+            'slug' => [
+                'source' => 'name'
+            ]
+        ];
+    }
 
     /**
      * The attributes that should be hidden for serialization.
@@ -42,4 +58,18 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    protected $attributes = [
+        'role_id' => 2
+    ];
+
+    public function roles()
+    {
+        return $this->belongsTo(Role::class, 'role_id');
+    }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class, 'order_id');
+    }
 }
