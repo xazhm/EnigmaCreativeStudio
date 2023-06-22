@@ -69,6 +69,10 @@
     --user-button-shadow: rgba(0, 0, 0, 0.1);
 }
 
+body .wrapper {
+    margin-top: 15vmin;
+}
+
 .main_h {
     position: fixed;
     max-height: 70px;

@@ -233,7 +233,8 @@ nav ul a {
     letter-spacing: 4rem;
     font-size: 7rem;
     opacity: 0.5;
-    -webkit-text-stroke: 1px var(--Putih);
+    color: transparent;
+    -webkit-text-stroke: 0.25vmin var(--Pink);
 }
 
 .ellipses-container {
@@ -544,12 +545,17 @@ body .template .options {
     display: flex;
     justify-content: center;
     background-color: var(--Hijau);
+    color: var(--Putih);
     max-width: 1120px;
-    min-height: 8vh;
-    border-radius: 30px;
+    height: 10vh;
+    border-radius: 10px;
     align-items: center;
     margin-top: 5vmin;
     width: calc(100% - 5vmin);
+    text-decoration: none;
+}
+
+.template .wrapper a {
     text-decoration: none;
 }
 
@@ -567,7 +573,7 @@ body .template .options {
     display: flex;
     flex-direction: column;
     font-family: "neue_leidenbold", sans-serif;
-    margin-top: 30vmin;
+    margin-top: 35vmin;
     align-items: center;
 }
 

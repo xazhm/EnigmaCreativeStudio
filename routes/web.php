@@ -25,6 +25,14 @@ Route::get('/home', function () {
     return view('home');
 });
 
+Route::get('/request', function () {
+    return view('design-request');
+});
+
+Route::get('/detail', function () {
+    return view('product-detail');
+});
+
 Route::get('/catalog', function () {
     return view('catalog');
 });
