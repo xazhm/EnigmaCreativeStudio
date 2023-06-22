@@ -11,8 +11,20 @@ class Category extends Model
     protected $table = 'category';
     protected $fillable = ['name'];
 
-    public function designs()
-    {
-        return $this->hasMany(Pembelian::class, 'category_id');
-    }
+    // public function designs()
+    // {
+    //     return $this->hasMany(Pembelian::class, 'category_id');
+    // }
+
+//     public function designs()
+// {
+//     return $this->hasMany(Design::class, 'category_id');
+// }
+
+public function designs()
+{
+    return $this->hasMany(Design::class, 'category_id');
+}
+
+
 }

@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Design extends Model
 {
     use HasFactory;
-    protected $fillable = ['gambar', 'name', 'detail', 'harga'];
+    protected $fillable = [
+        'name', 'detail', 'harga', 'gambar', 'category_id',
+    ];
 
     // Relationship with Pembelian
     public function pembelians()
@@ -16,9 +18,16 @@ class Design extends Model
         return $this->hasMany(Pembelian::class, 'designs_id');
     }
 
+    // // Relationship with Category
+    // public function category()
+    // {
+    //     return $this->belongsTo(Design::class, 'category_id');
+    // }
+
     // Relationship with Category
-    public function category()
-    {
-        return $this->belongsTo(Design::class, 'category_id');
-    }
+public function category()
+{
+    return $this->belongsTo(Category::class, 'category_id');
+}
+
 }
