@@ -1,220 +1,220 @@
 @font-face {
-  font-family: "neue_leidenbold";
-  src: url("../font/neueleiden-bold-webfont.woff2") format("woff2"),
-    url("../font/neueleiden-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "neue_leidenbold";
+    src: url("../font/neueleiden-bold-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-bold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "neue_leidenlight";
-  src: url("../font/neueleiden-light-webfont.woff2") format("woff2"),
-    url("../font/neueleiden-light-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "neue_leidenlight";
+    src: url("../font/neueleiden-light-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-light-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "neue_leidenmedium";
-  src: url("../font/neueleiden-medium-webfont.woff2") format("woff2"),
-    url("../font/neueleiden-medium-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "neue_leidenmedium";
+    src: url("../font/neueleiden-medium-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-medium-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "neue_leidenregular";
-  src: url("../font/neueleiden-regular-webfont.woff2") format("woff2"),
-    url("../font/neueleiden-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "neue_leidenregular";
+    src: url("../font/neueleiden-regular-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "neue_leidensemibold";
-  src: url("../font/neueleiden-semibold-webfont.woff2") format("woff2"),
-    url("../font/neueleiden-semibold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "neue_leidensemibold";
+    src: url("../font/neueleiden-semibold-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-semibold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "neue_leidenextralight";
-  src: url("../font/neueleiden-extralight-webfont.woff2") format("woff2"),
-    url("../font/neueleiden-extralight-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "neue_leidenextralight";
+    src: url("../font/neueleiden-extralight-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-extralight-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "neue_leidenthin";
-  src: url("../font/neueleiden-thin-webfont.woff2") format("woff2"),
-    url("../font/neueleiden-thin-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "neue_leidenthin";
+    src: url("../font/neueleiden-thin-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-thin-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @import url(https://pro.fontawesome.com/releases/v5.11.2/css/all.css);
 
 :root {
-  --Hijau: #4a8c80;
-  --Pink: #b23282;
-  --Cream: #dfb279;
-  --Abu: #242323;
-  --Hitam: #0c0c0c;
-  --Putih: #ffffff;
-  --user-button-circle: rgba(0, 0, 0, 0.025);
-  --user-button-cardborder: rgba(255, 255, 255, 0.25);
-  --user-button-text: #323133;
-  --user-button-shadow: rgba(0, 0, 0, 0.1);
+    --Hijau: #4a8c80;
+    --Pink: #b23282;
+    --Cream: #dfb279;
+    --Abu: #242323;
+    --Hitam: #0c0c0c;
+    --Putih: #ffffff;
+    --user-button-circle: rgba(0, 0, 0, 0.025);
+    --user-button-cardborder: rgba(255, 255, 255, 0.25);
+    --user-button-text: #323133;
+    --user-button-shadow: rgba(0, 0, 0, 0.1);
 }
 
 ::-webkit-scrollbar {
-  width: 0;
-  background: transparent;
+    width: 0;
+    background: transparent;
 }
 
 body {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  background-color: var(--Abu);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: var(--Abu);
 }
 
 .faq-section {
-  min-height: 100vh;
-  padding: 10vh 0 0;
+    min-height: 100vh;
+    padding: 10vh 0 0;
 }
 
 .faq-section {
-  display: flex;
+    display: flex;
 }
 .faq-title h2 {
-  position: relative;
-  margin-bottom: 45px;
-  display: inline-block;
-  line-height: 1.1;
-  font-family: "neue_leidensemibold", sans-serif;
-  font-size: 10vmin;
-  color: var(--Putih);
-  margin-top: 15%;
+    position: relative;
+    margin-bottom: 45px;
+    display: inline-block;
+    line-height: 1.1;
+    font-family: "neue_leidensemibold", sans-serif;
+    font-size: 10vmin;
+    color: var(--Putih);
+    margin-top: 15%;
 }
 .faq-title h2::before {
-  content: "";
-  position: absolute;
-  left: 30%;
-  width: 100px;
-  height: 2px;
-  background: var(--Cream);
-  bottom: -25px;
-  margin-left: -30px;
+    content: "";
+    position: absolute;
+    left: 30%;
+    width: 100px;
+    height: 2px;
+    background: var(--Cream);
+    bottom: -25px;
+    margin-left: -30px;
 }
 .faq-title p {
-  padding: 0 190px;
-  margin-bottom: 10px;
+    padding: 0 190px;
+    margin-bottom: 10px;
 }
 
 .faq {
-  background: var(--Abu);
-  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
-  border-radius: 4px;
+    background: var(--Abu);
+    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
 }
 
 .faq .card {
-  border: none;
-  background: none;
-  border: 0.09rem solid var(--Cream);
+    border: none;
+    background: none;
+    border: 0.09rem solid var(--Cream);
 }
 
 .faq .card .card-header {
-  padding: 0px;
-  border: none;
-  background: none;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+    padding: 0px;
+    border: none;
+    background: none;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
 }
 
 .faq .card .card-header:hover {
-  background: rgba(233, 30, 99, 0.1);
-  padding-left: 10px;
+    background: rgba(233, 30, 99, 0.1);
+    padding-left: 10px;
 }
 .faq .card .card-header .faq-title {
-  width: 100%;
-  text-align: left;
-  padding: 0px;
-  padding-left: 30px;
-  padding-right: 30px;
-  font-weight: 400;
-  font-size: 15px;
-  letter-spacing: 1px;
-  color: var(--Cream);
-  text-decoration: none !important;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-  padding-top: 20px;
-  padding-bottom: 20px;
+    width: 100%;
+    text-align: left;
+    padding: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: var(--Cream);
+    text-decoration: none !important;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .faq .card .card-header .faq-title .badge {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  line-height: 14px;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px;
-  text-align: center;
-  background: transparent;
-  color: var(--Cream);
-  font-size: 12px;
-  margin-right: 20px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 14px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    text-align: center;
+    background: transparent;
+    color: var(--Cream);
+    font-size: 12px;
+    margin-right: 20px;
 }
 
 .faq .card .card-body {
-  padding: 30px;
-  padding-left: 35px;
-  padding-bottom: 16px;
-  font-weight: 400;
-  font-size: 16px;
-  color: var(--Putih);
-  line-height: 28px;
-  letter-spacing: 1px;
-  border-top: 0.1rem solid var(--Cream);
+    padding: 30px;
+    padding-left: 35px;
+    padding-bottom: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--Putih);
+    line-height: 28px;
+    letter-spacing: 1px;
+    border-top: 0.1rem solid var(--Cream);
 }
 
 .faq .card .card-body p {
-  margin-bottom: 14px;
+    margin-bottom: 14px;
 }
 
 @media (max-width: 991px) {
-  .faq {
-    margin-bottom: 30px;
-  }
-  .faq .card .card-header .faq-title {
-    line-height: 26px;
-    margin-top: 10px;
-  }
+    .faq {
+        margin-bottom: 30px;
+    }
+    .faq .card .card-header .faq-title {
+        line-height: 26px;
+        margin-top: 10px;
+    }
 }
 
 .link-wa {
-  border-radius: 10%;
-  background-color: transparent;
-  border: solid 0.15rem var(--Cream);
-  color: var(--Putih);
-  cursor: pointer;
-  text-decoration: none;
+    border-radius: 10%;
+    background-color: transparent;
+    border: solid 0.15rem var(--Cream);
+    color: var(--Putih);
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .link-mail {
-  color: var(--putih);
+    color: var(--putih);
 }
 
 .link-wa:hover,
 .link-mail:hover {
-  text-decoration: none;
-  color: var(--Cream);
+    text-decoration: none;
+    color: var(--Cream);
 }

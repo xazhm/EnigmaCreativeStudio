@@ -42,13 +42,6 @@
           </div>
         </div>
       </div>
-
-      <div class="console-container">
-        <span id="text"></span>
-        <div class="console-underscore" id="console">&#95;</div>
-      </div>
     </div>
-
-    <script src="assets/js/confirm.js"></script>
   </body>
 </html>

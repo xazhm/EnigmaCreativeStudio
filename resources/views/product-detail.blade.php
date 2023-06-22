@@ -75,7 +75,7 @@
                 <div class="first-section">
 
         
-                    <button class="raise" id="cta">Add To Cart</button>
+                    <button class="raise" id="cta" onclick="window.location.href='cart'">Add To Cart</button>
                 </div>
                 <div class="second-section">
                   <div class="sort">

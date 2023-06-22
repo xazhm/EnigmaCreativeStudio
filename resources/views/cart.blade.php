@@ -133,7 +133,7 @@
                         ><span class="value">$44.00</span>
                     </li>
                     <li class="totalRow">
-                        <a href="#" class="btn continue">Checkout</a>
+                        <a href="confirmation" class="btn continue">Checkout</a>
                     </li>
                 </ul>
             </div>

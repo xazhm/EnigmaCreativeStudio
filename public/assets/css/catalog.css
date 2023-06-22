@@ -521,3 +521,13 @@ button {
     margin-top: 2vmin;
     margin: auto;
 }
+
+.link-catalog {
+    text-decoration: none;
+    color: var(--Putih);
+}
+
+.link-catalog:hover {
+    text-decoration: none;
+    color: var(--Cream);
+}
