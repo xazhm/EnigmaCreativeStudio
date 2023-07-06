@@ -1,0 +1,533 @@
+@font-face {
+    font-family: "neue_leidenbold";
+    src: url("../font/neueleiden-bold-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-bold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "neue_leidenlight";
+    src: url("../font/neueleiden-light-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-light-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "neue_leidenmedium";
+    src: url("../font/neueleiden-medium-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-medium-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "neue_leidenregular";
+    src: url("../font/neueleiden-regular-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "neue_leidensemibold";
+    src: url("../font/neueleiden-semibold-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-semibold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "neue_leidenextralight";
+    src: url("../font/neueleiden-extralight-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-extralight-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "neue_leidenthin";
+    src: url("../font/neueleiden-thin-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-thin-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url(https://pro.fontawesome.com/releases/v5.11.2/css/all.css);
+
+:root {
+    --Hijau: #4a8c80;
+    --Pink: #b23282;
+    --Cream: #dfb279;
+    --Abu: #242323;
+    --Hitam: #0c0c0c;
+    --Putih: #ffffff;
+    --user-button-circle: rgba(0, 0, 0, 0.025);
+    --user-button-cardborder: rgba(255, 255, 255, 0.25);
+    --user-button-text: #323133;
+    --user-button-shadow: rgba(0, 0, 0, 0.1);
+}
+
+body .wrapper {
+    margin-top: 15vmin;
+}
+
+.main_h {
+    position: fixed;
+    max-height: 70px;
+    z-index: 995;
+    width: 100%;
+    padding-top: 17px;
+    background: none;
+    overflow: hidden;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 0;
+    top: -100px;
+    padding-bottom: 6px;
+}
+@media only screen and (max-width: 766px) {
+    .main_h {
+        padding-top: 25px;
+    }
+}
+
+.open-nav {
+    max-height: 400px !important;
+}
+.open-nav .mobile-toggle {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+}
+
+.sticky {
+    background-color: var(--Hitam);
+    opacity: 1;
+    top: 0px;
+    opacity: 0.7;
+    filter: alpha(opacity=50);
+}
+
+.logo {
+    width: 50px;
+    font-size: 2.5rem;
+    color: var(--Pink);
+    text-transform: uppercase;
+    float: left;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-family: "neue_leidensemibold", sans-serif;
+}
+@media only screen and (max-width: 766px) {
+    .logo {
+        float: none;
+    }
+}
+
+nav {
+    float: right;
+    width: 80%;
+}
+@media only screen and (max-width: 766px) {
+    nav {
+        width: 100%;
+    }
+}
+nav ul {
+    list-style: none;
+    overflow: hidden;
+    text-align: right;
+    float: right;
+}
+@media only screen and (max-width: 766px) {
+    nav ul {
+        padding-top: 10px;
+        margin-bottom: 22px;
+        float: left;
+        text-align: center;
+        width: 100%;
+    }
+}
+nav ul li {
+    display: inline-block;
+    margin-left: 35px;
+    line-height: 1.5;
+}
+@media only screen and (max-width: 766px) {
+    nav ul li {
+        width: 100%;
+        padding: 7px 0;
+        margin: 0;
+    }
+}
+nav ul a {
+    color: var(--Putih);
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: "neue_leidenregular", sans-serif;
+    text-decoration: none;
+}
+
+.mobile-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    right: 22px;
+    top: 0;
+    width: 30px;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+}
+@media only screen and (max-width: 766px) {
+    .mobile-toggle {
+        display: block;
+    }
+}
+.mobile-toggle span {
+    width: 30px;
+    height: 6px;
+    margin-bottom: 6px;
+    border-radius: 1000px;
+    background: var(--Putih);
+    display: block;
+}
+
+.row {
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 2%;
+}
+body {
+    font-family: "neue_leidenbold", sans-serif;
+    min-width: 320px;
+    background-color: var(--Hitam);
+}
+
+.wrapper {
+    max-width: 1220px;
+    display: flex;
+    margin: auto;
+}
+
+.sidebar {
+    background-color: var(--Abu);
+    border: solid 2px white;
+    height: fit-content;
+}
+
+.first-section,
+.second-section {
+    border: solid 2px var(--Putih);
+    padding: 3vmin;
+}
+
+/* main */
+.box-container {
+    margin-left: 5vmin;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#card {
+    width: calc(max(350px, 40vmin));
+    aspect-ratio: 3 / 3;
+    border: 0.15rem solid var(--Abu);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#card > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.catalog {
+    color: var(--Putih);
+    border: solid 2px var(--Cream);
+    margin: 1vmin;
+}
+
+.catalog h4 {
+    font-size: 4vmin;
+    font-family: "neue_leidenregular", sans-serif;
+}
+
+.catalog .card-title {
+    border-bottom: solid 2px var(--Cream);
+    border-top: solid 2px var(--Cream);
+    padding: 20px 0 20px 24px;
+}
+
+.catalog .card-interaction {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 4px 20px 24px;
+}
+/* sidebar */
+
+.input-holder {
+    border: solid 2px var(--Putih);
+    border-radius: 10px;
+    font-size: 1.25em;
+    background-color: var(--Abu);
+    padding: 10px 20px;
+    color: var(--Putih);
+    max-width: 215px;
+    margin-top: 2vmin;
+}
+
+#input::placeholder {
+    color: var(--Putih);
+    opacity: 0.5;
+}
+
+/* sortingan */
+.sort {
+    position: relative;
+    z-index: 0;
+}
+
+.sort h1 {
+    padding: 2px;
+    color: var(--Putih);
+    font-size: 4vmin;
+    text-align: center;
+}
+
+mark {
+    background-color: transparent;
+    font-size: 1.25em;
+}
+
+.checkbox {
+    text-align: justify;
+    direction: rtl;
+    position: relative;
+    line-height: 0;
+}
+.checkbox:after {
+    content: "";
+    width: 100%;
+    display: inline-block;
+}
+.checkbox input,
+.checkbox .label,
+.checkbox .check {
+    display: inline-block;
+    vertical-align: middle;
+}
+.checkbox .label {
+    max-width: 200px;
+}
+.checkbox .check {
+    position: relative;
+}
+.checkbox input[type="checkbox"] {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+}
+.checkbox input[type="checkbox"]:focus {
+    outline: 0;
+}
+.checkbox input[type="checkbox"]:checked + .ripple-container .check-off {
+    border-color: #fff;
+}
+.checkbox input[type="checkbox"]:checked + .ripple-container .check-on {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+    color: #fff;
+}
+.checkbox
+    input[type="checkbox"]:checked
+    + .ripple-container
+    .check-ripple:before,
+.checkbox
+    input[type="checkbox"]:checked
+    + .ripple-container
+    .check-ripple:after {
+    -webkit-transition: all 0.65s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -moz-transition: all 0.65s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.65s cubic-bezier(0.25, 0.8, 0.25, 1);
+    opacity: 0;
+}
+.checkbox
+    input[type="checkbox"]:checked
+    + .ripple-container
+    .check-ripple:before {
+    -webkit-transform: scale(3);
+    -moz-transform: scale(3);
+    -ms-transform: scale(3);
+    -o-transform: scale(3);
+    transform: scale(3);
+}
+.checkbox
+    input[type="checkbox"]:checked
+    + .ripple-container
+    .check-ripple:after {
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+}
+.checkbox input[type="checkbox"] + .ripple-container {
+    width: auto;
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    top: 2px;
+    pointer-events: none;
+}
+.checkbox input[type="checkbox"] + .ripple-container:before {
+    content: "";
+    position: absolute;
+    border-radius: 2px;
+    display: block;
+    height: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.checkbox input[type="checkbox"] + .ripple-container .check-off {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 0;
+    top: 0;
+    border-radius: 2px;
+    border: 2px solid #fa9e9a;
+    transition: border-color ease 0.28s;
+}
+.checkbox input[type="checkbox"] + .ripple-container .check-on {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 0s;
+    -moz-transition: all 0s;
+    transition: all 0s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 25px;
+}
+.checkbox input[type="checkbox"] + .ripple-container .check-ripple:before,
+.checkbox input[type="checkbox"] + .ripple-container .check-ripple:after {
+    -webkit-transition: all 0s;
+    -moz-transition: all 0s;
+    transition: all 0s;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    content: "";
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    opacity: 1;
+}
+.checkbox input[type="checkbox"] + .ripple-container .check-ripple:before {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+.checkbox input[type="checkbox"] + .ripple-container .check-ripple:after {
+    background-color: rgba(219, 213, 213, 0.6);
+}
+
+.check-menu {
+    position: relative;
+    color: #fff;
+    padding: 15px 25px;
+}
+.check-menu mark {
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+.check-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+.check-menu ul li {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    padding: 15px 0;
+    position: relative;
+    /* CHECKED STYLE */
+}
+.check-menu ul li .label {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    margin-bottom: 2px;
+    line-height: 1.2;
+    direction: ltr;
+    text-align: left;
+    opacity: 1;
+}
+
+.check-menu.checklist mark {
+    color: var(--Putih);
+}
+.check-menu.checklist
+    .checkbox
+    input[type="checkbox"]
+    + .ripple-container
+    .check-off {
+    border: 2px solid #fff;
+}
+
+button {
+    border: solid 2px var(--Putih);
+    border-radius: 10px;
+    font-size: 1.25em;
+    background-color: var(--Abu);
+    padding: 10px 20px;
+    color: var(--Putih);
+    width: 100%;
+    margin-top: 2vmin;
+    margin: auto;
+}
+
+.link-catalog {
+    text-decoration: none;
+    color: var(--Putih);
+}
+
+.link-catalog:hover {
+    text-decoration: none;
+    color: var(--Cream);
+}

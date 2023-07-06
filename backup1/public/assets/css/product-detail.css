@@ -1,0 +1,405 @@
+@font-face {
+    font-family: "neue_leidenbold";
+    src: url("../font/neueleiden-bold-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-bold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "neue_leidenlight";
+    src: url("../font/neueleiden-light-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-light-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "neue_leidenmedium";
+    src: url("../font/neueleiden-medium-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-medium-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "neue_leidenregular";
+    src: url("../font/neueleiden-regular-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "neue_leidensemibold";
+    src: url("../font/neueleiden-semibold-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-semibold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "neue_leidenextralight";
+    src: url("../font/neueleiden-extralight-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-extralight-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "neue_leidenthin";
+    src: url("../font/neueleiden-thin-webfont.woff2") format("woff2"),
+        url("../font/neueleiden-thin-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url(https://pro.fontawesome.com/releases/v5.11.2/css/all.css);
+
+:root {
+    --Hijau: #4a8c80;
+    --Pink: #b23282;
+    --Cream: #dfb279;
+    --Abu: #242323;
+    --Hitam: #0c0c0c;
+    --Putih: #ffffff;
+    --user-button-circle: rgba(0, 0, 0, 0.025);
+    --user-button-cardborder: rgba(255, 255, 255, 0.25);
+    --user-button-text: #323133;
+    --user-button-shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: var(--Abu);
+}
+
+.main_h {
+    position: fixed;
+    max-height: 70px;
+    z-index: 995;
+    width: 100%;
+    padding-top: 17px;
+    background: none;
+    overflow: hidden;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 0;
+    top: -100px;
+    padding-bottom: 6px;
+}
+@media only screen and (max-width: 766px) {
+    .main_h {
+        padding-top: 25px;
+    }
+}
+
+.open-nav {
+    max-height: 400px !important;
+}
+.open-nav .mobile-toggle {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+}
+
+.sticky {
+    background-color: var(--Hitam);
+    opacity: 1;
+    top: 0px;
+    opacity: 0.7;
+    filter: alpha(opacity=50);
+}
+
+.logo {
+    width: 50px;
+    font-size: 2.5rem;
+    color: var(--Pink);
+    text-transform: uppercase;
+    float: left;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-family: "neue_leidensemibold", sans-serif;
+}
+@media only screen and (max-width: 766px) {
+    .logo {
+        float: none;
+    }
+}
+
+nav {
+    float: right;
+    width: 80%;
+}
+@media only screen and (max-width: 766px) {
+    nav {
+        width: 100%;
+    }
+}
+nav ul {
+    list-style: none;
+    overflow: hidden;
+    text-align: right;
+    float: right;
+}
+@media only screen and (max-width: 766px) {
+    nav ul {
+        padding-top: 10px;
+        margin-bottom: 22px;
+        float: left;
+        text-align: center;
+        width: 100%;
+    }
+}
+nav ul li {
+    display: inline-block;
+    margin-left: 35px;
+    line-height: 1.5;
+}
+@media only screen and (max-width: 766px) {
+    nav ul li {
+        width: 100%;
+        padding: 7px 0;
+        margin: 0;
+    }
+}
+nav ul a {
+    color: var(--Putih);
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: "neue_leidenregular", sans-serif;
+    text-decoration: none;
+}
+
+.mobile-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    right: 22px;
+    top: 0;
+    width: 30px;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+}
+@media only screen and (max-width: 766px) {
+    .mobile-toggle {
+        display: block;
+    }
+}
+.mobile-toggle span {
+    width: 30px;
+    height: 6px;
+    margin-bottom: 6px;
+    border-radius: 1000px;
+    background: var(--Putih);
+    display: block;
+}
+
+.row {
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 2%;
+}
+
+/* sidebar */
+
+.input-holder {
+    border: solid 2px var(--Putih);
+    border-radius: 10px;
+    font-size: 1.25em;
+    background-color: var(--Abu);
+    padding: 10px 20px;
+    color: var(--Putih);
+    max-width: 215px;
+    margin-top: 2vmin;
+}
+
+#input::placeholder {
+    color: var(--Putih);
+    opacity: 0.5;
+}
+
+/* sortingan */
+.sort {
+    position: relative;
+    z-index: 0;
+}
+
+.second-section ul {
+    font-family: "neue_leidensemibold", sans-serif;
+    color: var(--Putih);
+    font-size: 2vmin;
+    list-style-type: none;
+    height: 100%;
+}
+
+.sort h1 {
+    padding: 2px;
+    color: var(--Putih);
+    font-size: 4vmin;
+    text-align: center;
+}
+
+button {
+    padding: 1rem;
+    border: solid 2px var(--Putih);
+    border-radius: 10px;
+    font-size: 1.25em;
+    background-color: var(--Abu);
+    padding: 10px 20px;
+    color: var(--Putih);
+    width: 100%;
+    cursor: pointer;
+}
+
+.product-main {
+    margin-top: 15vmin;
+}
+.wrapper {
+    max-width: 1120px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.card {
+    border: 0.15rem solid var(--Cream);
+}
+
+.section2 {
+    border: 0.15rem solid var(--Cream);
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-placeholder {
+    width: calc(max(1115px, 105vmin));
+    aspect-ratio: 16 / 9;
+    border: 1rem solid var(--cream);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.image-placeholder > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-detail .other-detail {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.section2 {
+    height: fit-content;
+}
+
+.section2 .right-section {
+    width: 30%;
+    border-left: solid 2px var(--Cream);
+}
+
+.sidebar {
+    background-color: var(--Abu);
+
+    height: fit-content;
+}
+
+.first-section,
+.second-section {
+    padding: 3vmin;
+}
+
+.first-section {
+    border-bottom: solid 2px var(--Cream);
+}
+
+.product-detail .title {
+    padding: 1rem;
+    border-bottom: solid 0.15rem var(--Cream);
+    height: 15vmin;
+    font-size: 5rem;
+    font-family: "neue_leidenbold", sans-serif;
+    color: var(--Putih);
+}
+
+.product-detail .price,
+.product-detail .author {
+    border-right: solid 0.15rem var(--Cream);
+}
+
+.product-detail .price,
+.product-detail .author {
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    font-family: "neue_leidensemibold", sans-serif;
+    color: var(--Putih);
+    font-size: 1.3rem;
+}
+.product-detail .last-update {
+    padding: 0.75rem 2rem 0.5rem 2rem;
+    font-family: "neue_leidensemibold", sans-serif;
+    color: var(--Putih);
+    font-size: 0.75rem;
+    justify-content: center;
+    text-align: left;
+}
+
+.product-detail .price {
+    width: 30%;
+}
+
+.product-detail .author {
+    width: 50%;
+}
+
+.product-detail .last-update {
+    width: 20%;
+}
+
+.left-section .product-detail {
+    border-bottom: solid 0.15rem var(--Cream);
+}
+
+.left-section .description {
+    padding: 2rem;
+    color: var(--Putih);
+    font-family: "neue_leidenregular", sans-serif;
+    font-size: calc(max(20px, 2.5vmin));
+    line-height: 1.6;
+}
+
+.raise:hover,
+.raise:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--Cream);
+    transform: translateY(-0.25em);
+}
+
+button {
+    color: var(--Putih);
+    transition: 0.25s;
+}
+button:hover,
+button:focus {
+    border-color: var(--Cream);
+    color: var(--Cream);
+}
+
+#cta {
+    width: 35vmin;
+    height: 15vmin;
+}
+
+.left-section {
+    max-width: 70%;
+}
